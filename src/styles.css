@@ -1,0 +1,292 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f1f3f5;
+  padding: 20px;
+  color: #343a40;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.app:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+}
+
+.app-header {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 25px;
+}
+
+.app-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.focus-task {
+  background: #e7f3ff;
+  padding: 18px;
+  border-radius: 10px;
+  border-left: 5px solid #339af0;
+  font-weight: 500;
+  color: #1c7ed6;
+}
+
+.app-container {
+  display: flex;
+  gap: 30px;
+}
+
+.today-tasks {
+  width: 280px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.today-tasks h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dee2e6;
+  padding-bottom: 10px;
+}
+
+.task-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.category-item {
+  padding: 14px 18px;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #e9ecef;
+  transition: all 0.2s ease;
+}
+
+.category-item:hover {
+  background: #e9f5ff;
+  border-color: #74c0fc;
+  transform: translateY(-1px);
+}
+
+.task-details {
+  flex: 1;
+}
+
+/* List and Task Styles */
+.list-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.list-header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f3f5;
+}
+
+.task:last-child {
+  border-bottom: none;
+}
+
+.task input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.task span {
+  flex-grow: 1;
+  font-size: 15px;
+}
+
+.task-time {
+  font-size: 12px;
+  color: #adb5bd;
+  margin-left: 10px;
+}
+
+/* Add Task Form */
+.add-task-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.add-task-form input {
+  flex-grow: 1;
+  padding: 10px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+.add-task-form input:focus {
+  outline: none;
+  border-color: #339af0;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border 0.2s ease;
+}
+
+.search-bar input:focus {
+  border-color: #339af0;
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .today-tasks {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+/* Main App Layout */
+.app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app-container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Today Tasks (Left Sidebar) */
+.today-tasks {
+  flex: 1;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+}
+
+.calendar-icon {
+  color: #6a5acd;
+}
+
+.task-categories {
+  margin: 20px 0;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #f8f9fa;
+  transition: background 0.2s;
+}
+
+.category-item:hover {
+  background: #e9ecef;
+}
+
+.mac-circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Color variations for category dots */
+.color-0 { background: #ff6b6b; } /* Red */
+.color-1 { background: #4ecdc4; } /* Teal */
+.color-2 { background: #ffd166; } /* Yellow */
+.color-3 { background: #a0c4ff; } /* Blue */
+.color-4 { background: #b5ead7; } /* Mint */
+
+/* Task Details (Right Section - #A08AFF Purple) */
+.task-details {
+  flex: 2;
+  padding: 25px;
+  background: #A08AFF; /* Your requested purple */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(160, 138, 255, 0.3);
+  color: white; /* White text for contrast */
+}
+
+.task-details h1 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Ensure buttons/inputs remain visible */
+.task-details input,
+.task-details button {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: none;
+}
+
+.task-details button:hover {
+  background: white;
+}
+
+
